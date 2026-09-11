@@ -44,6 +44,10 @@ public class CsvReaderService {
 
         }
 
+        if (products.isEmpty()) {
+            throw new IllegalArgumentException("CSV file contains no valid
+                    sales records.");
+
 
     }
 }
