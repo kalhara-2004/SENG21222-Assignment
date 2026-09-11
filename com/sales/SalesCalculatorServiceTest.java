@@ -11,24 +11,17 @@ public class SalesCalculatorServiceTest {
         SalesCalculatorService calculator = new SalesCalculatorService();
         List<Product> sampleProducts = new ArrayList<>();
 
-        sampleProducts.add(new Product("P001", "Wireless Mouse",
-                "Electronics", 12, 25.50)); // Rev: 306.00
-        sampleProducts.add(new Product("P002", "Notebook", "Stationery", 35,
-                3.75));        // Rev: 131.25
-        sampleProducts.add(new Product("P003", "USB Hub", "Electronics", 8,
-                18.00));         // Rev: 144.00
-        sampleProducts.add(new Product("P004", "Ballpoint Pen", "Stationery",
-                100, 0.50));   // Rev: 50.00
-        sampleProducts.add(new Product("P005", "HDMI Cable", "Electronics",
-                20, 12.00));      // Rev: 240.00
+        sampleProducts.add(new Product("P001", "Wireless Mouse", "Electronics", 12, 25.50)); // Rev: 306.00
+        sampleProducts.add(new Product("P002", "Notebook", "Stationery", 35, 3.75));        // Rev: 131.25
+        sampleProducts.add(new Product("P003", "USB Hub", "Electronics", 8, 18.00));         // Rev: 144.00
+        sampleProducts.add(new Product("P004", "Ballpoint Pen", "Stationery", 100, 0.50));   // Rev: 50.00
+        sampleProducts.add(new Product("P005", "HDMI Cable", "Electronics", 20, 12.00));      // Rev: 240.00
 
         SalesSummary summary = calculator.calculateSummary(sampleProducts);
 
         // Test Revenue Calculation
-        check(sampleProducts.get(0).getTotalRevenue() == 306.00, "Wireless
-                Mouse revenue calculation failed");
-                check(summary.getGrandTotalRevenue() == 871.25, "Grand total revenue
-                        calculation failed");
+        check(sampleProducts.get(0).getTotalRevenue() == 306.00, "Wireless Mouse revenue calculation failed");
+                check(summary.getGrandTotalRevenue() == 871.25, "Grand total revenue calculation failed");
 
                         // Test Best Seller Logic
                         check("P004".equals(summary.getBestSellingProduct().getProductId()),
