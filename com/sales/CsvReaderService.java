@@ -31,9 +31,19 @@ public class CsvReaderService {
                 if (tokens.length < 5) {
                     throw new IllegalArgumentException("Invalid CSV row format: " + line);
                 }
+
+                String id = tokens[0].trim();
+                String name = tokens[1].trim();
+                String category = tokens[2].trim();
+                int quantity = Integer.parseInt(tokens[3].trim());
+                double unitPrice = Double.parseDouble(tokens[4].trim());
+
+                products.add(new Product(id, name, category, quantity, unitPrice));
+
             }
 
         }
+
 
     }
 }
