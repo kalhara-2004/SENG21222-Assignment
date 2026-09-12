@@ -20,6 +20,24 @@ public class SalesSummary {
         this.grandTotalRevenue = grandTotalRevenue;
     }
 
-    
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public Map<String, Double> getCategoryRevenues() {
+        return categoryRevenues;
+    }
+
+    public Product getBestSellingProduct() {
+        return bestSellingProduct;
+    }
+
+    public Product getHighestRevenueProduct() {
+        return highestRevenueProduct;
+    }
+
+    public double getGrandTotalRevenue() {
+        return grandTotalRevenue;
+    }
 
 }
