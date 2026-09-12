@@ -15,5 +15,29 @@ public class Product {
         this.quantitySold = quantitySold;
         this.unitPrice = unitPrice;
     }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public int getQuantitySold() {
+        return quantitySold;
+    }
+
+    public double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public double getTotalRevenue() {
+        return quantitySold * unitPrice;
+    }
     
 }
