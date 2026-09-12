@@ -32,8 +32,7 @@ public class FileOutputStrategy implements OutputStrategy {
             }
 
             writer.write("\n--- Highlights ---\n");
-            writer.write(String.format("Best-Selling Product : %s (%d
-                            units)\n",
+            writer.write(String.format("Best-Selling Product : %s (%d units)\n",
                     summary.getBestSellingProduct().getProductName(),
                     summary.getBestSellingProduct().getQuantitySold()));
 
